@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maker Space · Accessibility case study · Olena Voroniuk</title>
+<meta name="description" content="Maker Space: a booking site designed, built and audited to WCAG 2.2 AA, with automated and manual accessibility testing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css?v=20261108l">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap top">
+  <a class="brand" href="../index.html">olena<span>.</span>voroniuk</a>
+  <nav aria-label="Main"><a href="../index.html">All work</a><a href="../index.html#dev">UX &amp; Web</a><a href="illustration.html">Graphic design</a><a href="../assets/Olena_Voroniuk_Resume.pdf" download>Resume ↓</a></nav>
+</header>
+
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <div class="pills"><span class="pill">Figma</span><span class="pill">Claude</span><span class="pill">GitHub</span><span class="pill hot">Accessibility</span></div>
+      <h1>Maker Space</h1>
+      <p class="lede">A booking site for a community makerspace. I created the light-theme concept in Figma, refined and built it with Claude, then audited it against WCAG 2.2 AA and fixed every issue without losing its workshop personality.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://olena-v.github.io/maker-space/">Live site ↗</a>
+        <a class="btn" href="https://github.com/olena-v/maker-space">Code on GitHub ↗</a>
+      </div>
+    </div>
+    <div class="hero-img"><img src="../assets/img/makerspace-two-themes.jpg" alt="Maker Space on a laptop and phone in the dark theme and on a tablet and phone in the light theme" width="1800" height="1012"></div>
+  </div>
+
+  <dl class="meta">
+    <div><dt>Role</dt><dd>UX research, light-theme concept in Figma, refinement and code with Claude, accessibility audit</dd></div>
+    <div><dt>Result</dt><dd>5 views, light and dark themes, WCAG 2.2 AA with 0 axe violations</dd></div>
+    <div><dt>Tools &amp; methods</dt><dd><ul class="tools"><li>Xtensio (persona)</li><li>Figma</li><li>Claude</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Git &amp; GitHub</li><li>GitHub Pages</li><li>axe DevTools</li><li>Accessibility Insights</li></ul></dd></div>
+  </dl>
+
+  <section class="block" aria-labelledby="s-why">
+    <span class="lbl">The project</span>
+    <h2 id="s-why">Book a machine, learn it, make something</h2>
+    <p class="prose">Maker Space is a concept site for a community workshop where students and young designers book time on 3D printers, laser cutters, screen printing, wood and metal tools. Visitors pick a workshop, read how to use the machine, browse finished projects and reserve up to four 30-minute slots.</p>
+    <p class="prose">I created the core concept of the light theme in <strong>Figma</strong>: the colour palette, the visual style and the look of the main screens. I then refined it with <strong>Claude</strong> as my AI partner. Claude built the dark theme on top of my light-theme concept and wrote the code, while I set the direction, reviewed every change and tested the result.</p>
+    <p class="prose">The code lives in a public <strong>GitHub</strong> repository and deploys automatically to <strong>GitHub Pages</strong>. Every fix in this case study is a commit you can read.</p>
+    <figure><img src="../assets/img/makerspace-light-dark.jpg" alt="The Maker Space home screen on two phones, one in the light theme and one in the dark theme, over a softly glowing background" loading="lazy" width="1600" height="900"><figcaption>Same flow, two moods: both themes pass contrast checks on every screen size.</figcaption></figure>
+  </section>
+
+  <section class="block" aria-labelledby="s-method">
+    <span class="lbl">Method</span>
+    <h2 id="s-method">Automated scans, then a manual pass</h2>
+    <p class="prose">Every view was checked in both themes at desktop (1280 px) and phone (320 px) width: 20 combinations. The audit ran in two steps.</p>
+    <p class="prose"><strong>Step 1, with Claude:</strong> Claude ran automated axe scans, measured every colour pair, tested the layout at 320 px and fixed what it found, from contrast and focus rings to headings and form errors.</p>
+    <p class="prose"><strong>Step 2, by hand:</strong> I then tested the site myself. I re-ran axe DevTools, then used <strong>Accessibility Insights for Web</strong> as my testing tool and followed its step-by-step manual assessment: I went through every page with the keyboard only and checked the heading structure. This manual pass found problems the automated scans had missed, and I had them fixed too.</p>    <ul class="cards">
+      <li><h3>Automated scan</h3><p>axe with WCAG 2.2 AA rules and best-practice checks. Step 1 with Claude, re-checked by me in axe DevTools.</p></li>
+      <li><h3>Contrast math</h3><p>Every text and control colour pair measured against the 4.5:1 and 3:1 minimums.</p></li>
+      <li><h3>Manual keyboard</h3><p>My own hands-on assessment in Accessibility Insights for Web: every control used without a mouse.</p></li>
+      <li><h3>Heading logic</h3><p>My own check of whether the headings read like a table of contents, page by page.</p></li>
+      <li><h3>Phone reflow</h3><p>Each view at 320 px wide, where nothing may scroll sideways.</p></li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="s-found">
+    <span class="lbl">Findings</span>
+    <h2 id="s-found">What the audit found</h2>
+    <div class="stats">
+      <div><b>16 → 0</b><span>contrast failures in the light theme</span></div>
+      <div><b>4 → 0</b><span>views without a main H1 heading</span></div>
+      <div><b>62 px → 0</b><span>sideways overflow on a 320 px phone</span></div>
+      <div><b>10 → 0</b><span>issues only a person found, from focus visibility and Tab order to heading logic</span></div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="s-contrast">
+    <span class="lbl">Fix 1 · Colour</span>
+    <h2 id="s-contrast">Contrast, before and after</h2>
+    <p class="prose">One darker shade of the same olive fixed the buttons, filters and step numbers, so the brand still reads the same. The focus ring switched to the ink colour in the light theme.</p>
+    <div class="two" style="margin-top:28px">
+      <figure><span class="tag-ba fail">Before</span><img src="../assets/img/ms-before-header.jpg" alt="Old header: current page in light amber text and a light green button" loading="lazy" width="1320" height="150"></figure>
+      <figure><span class="tag-ba pass">After</span><img src="../assets/img/ms-after-header.jpg" alt="New header: current page in darker bronze text, a darker green button and a new pause button" loading="lazy" width="1320" height="150"></figure>
+    </div>
+    <div class="tbl" tabindex="0" role="region" aria-label="Contrast before and after (scrolls sideways on small screens)">
+      <table>
+        <thead><tr><th scope="col">Element</th><th scope="col">Before</th><th scope="col">After</th><th scope="col">Minimum</th><th scope="col">Change</th></tr></thead>
+        <tbody>
+          <tr><td>Primary button text</td><td class="fail">2.78:1 fail</td><td class="pass">4.70:1 pass</td><td>4.5:1</td><td>+69%</td></tr>
+          <tr><td>Form field borders</td><td class="fail">2.78:1 fail</td><td class="pass">4.70:1 pass</td><td>3:1</td><td>+69%</td></tr>
+          <tr><td>Current menu item</td><td class="fail">2.28:1 fail</td><td class="pass">5.53:1 pass</td><td>4.5:1</td><td>+143%</td></tr>
+          <tr><td>Focus ring on the page</td><td class="fail">1.74:1 fail</td><td class="pass">14.82:1 pass</td><td>3:1</td><td>+752%</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="s-keys">
+    <span class="lbl">Fix 2 · Keyboard &amp; screen readers</span>
+    <h2 id="s-keys">What a mouse never shows</h2>
+    <p class="prose">After Claude’s automated scans reported zero issues, my own manual keyboard pass in <strong>Accessibility Insights for Web</strong> still found problems. These are the fixes that made the site work without a mouse.</p>
+    <div class="two" style="margin-top:28px;align-items:start">
+      <ul class="cards" style="margin-top:0;grid-template-columns:1fr">
+        <li><h3>Tab order follows the screen</h3><p>Theme buttons came before the menu, and four decorative step icons were extra Tab stops. Now focus moves left to right and skips decoration.</p></li>
+        <li><h3>Workshop picker</h3><p>Tab reaches every workshop; Space or Enter opens it and moves focus into its card.</p></li>
+        <li><h3>Headings that make sense</h3><p>Every view has its own H1 and page title; booking steps and machine guides became real headings.</p></li>
+      </ul>
+      <figure><img src="../assets/img/ms-focus-tabs.jpg" alt="Workshop list with a thick dark focus ring around the selected Laser Cutters button" loading="lazy" width="620" height="700"><figcaption>A focus ring you can actually see: 14.8:1 against the page.</figcaption></figure>
+    </div>
+    <h3 style="font-size:22px;font-weight:600;margin-top:48px">Tab order, before and after my manual pass</h3>
+    <p class="prose" style="margin-top:8px">Each number is a Tab stop, in the order keyboard focus moves. Screenshots come from the site’s code in the commits before and after my fixes.</p>
+    <div class="two" style="margin-top:20px">
+      <figure><span class="tag-ba fail">Before</span><img src="../assets/img/ms-tabs-home-before.jpg" alt="Home page with 13 numbered Tab stops: focus jumps from the logo to the theme and pause buttons on the far right, back to the menu, then stops on four decorative step icons" loading="lazy" width="1280" height="520"><figcaption>Focus jumped to the theme buttons first, then landed on four decorative icons.</figcaption></figure>
+      <figure><span class="tag-ba pass">After</span><img src="../assets/img/ms-tabs-home-after.jpg" alt="Home page with 9 numbered Tab stops moving left to right across the header, then straight to the Start Creating Today button" loading="lazy" width="1280" height="520"><figcaption>Left to right, like the screen reads. The icons are no longer Tab stops.</figcaption></figure>
+    </div>
+    <div class="two" style="margin-top:20px">
+      <figure><span class="tag-ba fail">Before</span><img src="../assets/img/ms-tabs-tools-before.jpg" alt="Materials and Tools page: only the selected workshop, Screen Printing, is a Tab stop; the other four workshops can’t be reached with Tab" loading="lazy" width="1280" height="640"><figcaption>Only the selected workshop was a Tab stop. Focus stuck there.</figcaption></figure>
+      <figure><span class="tag-ba pass">After</span><img src="../assets/img/ms-tabs-tools-after.jpg" alt="Materials and Tools page: all five workshop buttons are numbered Tab stops, 9 to 13, top to bottom" loading="lazy" width="1280" height="640"><figcaption>Tab reaches all five workshops.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="s-motion">
+    <span class="lbl">Fix 3 · Motion</span>
+    <h2 id="s-motion">A pause button for looping animation</h2>
+    <p class="prose"><strong>Before:</strong> dashed arrows, bobbing icons and sparkles looped forever. Only the operating system’s Reduce Motion setting could stop them, and most visitors never change it.</p>
+    <p class="prose"><strong>After:</strong> a pause button sits next to the theme switch. One tap stops every animation on the site, also turns off the scroll reveals, and the choice is remembered on the next visit. Screen readers announce it as “Pause animations, toggle button”, with its on or off state.</p>
+    <p class="prose"><strong>Why it matters:</strong> WCAG 2.2.2 Pause, Stop, Hide (Level A) asks for an on-page control for any motion that lasts more than five seconds. Constant movement makes reading hard for people with attention disorders and can cause dizziness or nausea for people with vestibular disorders.</p>
+    <figure style="max-width:410px"><img src="../assets/img/ms-pause-button.jpg" alt="Header buttons: Book Your Time, a moon icon for the theme switch and a pause icon for stopping animations" loading="lazy" width="410" height="106"><figcaption>The new pause button next to the theme switch</figcaption></figure>
+  </section>
+
+  <section class="block" aria-labelledby="s-form">
+    <span class="lbl">Fix 4 · Forms</span>
+    <h2 id="s-form">Booking errors you can hear and see</h2>
+    <p class="prose">Fields that fail now turn red, are marked invalid for screen readers and are linked to the error message, which is announced. Focus jumps to the first field to fix.</p>
+    <div class="two" style="margin-top:28px">
+      <figure><span class="tag-ba fail">Before</span><img src="../assets/img/ms-before-form.jpg" alt="Old booking form with no required-field hint" loading="lazy" width="1600" height="722"></figure>
+      <figure><span class="tag-ba pass">After</span><img src="../assets/img/ms-after-form.jpg" alt="New booking form with a required-fields hint, red borders on two fields, a focus ring and an error message" loading="lazy" width="1600" height="755"></figure>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="s-out">
+    <span class="lbl">Outcome</span>
+    <h2 id="s-out">0 violations, and a manual pass that holds</h2>
+    <p class="prose">axe reports no WCAG 2.2 AA violations across all 20 view, theme and width combinations, and the manual keyboard assessment in Accessibility Insights passes. Next: a screen-reader session with VoiceOver and NVDA, and a usability test with five makers.</p>
+    <div class="three" style="margin-top:28px">
+      <figure><img src="../assets/img/ms-axe-home.jpg" alt="axe DevTools scan of the live Home page: 0 total issues, 0 critical, serious, moderate and minor, best practices on, WCAG 2.1 AA" loading="lazy" width="1002" height="908"><figcaption>Home</figcaption></figure>
+      <figure><img src="../assets/img/ms-axe-book.jpg" alt="axe DevTools scan of the live Book page: 0 total issues, best practices on, WCAG 2.1 AA" loading="lazy" width="1002" height="908"><figcaption>Book</figcaption></figure>
+      <figure><img src="../assets/img/ms-axe-projects.jpg" alt="axe DevTools scan of the live Projects page: 0 total issues, best practices on, WCAG 2.1 AA" loading="lazy" width="1002" height="908"><figcaption>Projects</figcaption></figure>
+    </div>
+    <p class="prose" style="margin-top:12px">My own re-check in axe DevTools on the live site: 0 issues, with best practices on.</p>
+    <p class="note">This is a front-end prototype: bookings are stored in each visitor’s browser. A shared booking backend is the next build step.</p>
+  </section>
+
+  <nav class="next" aria-label="More projects">
+    <a class="prev" href="cooking-community.html"><span class="lbl">Previous project</span><span class="big">← Cooking Community</span></a>
+    <a class="nxt" href="carmat.html"><span class="lbl">Next project</span><span class="big">CarMat Website →</span></a>
+  </nav>
+</main>
+<footer class="wrap site">
+  <span>© 2026 Olena Voroniuk</span>
+  <nav class="foot-links" aria-label="Contact">
+    <a href="mailto:olena.voroniuk2@gmail.com">olena.voroniuk2@gmail.com</a>
+    <a href="https://www.linkedin.com/in/olena-voroniuk-216633222/">LinkedIn ↗</a>
+    <a href="https://github.com/olena-v">GitHub ↗</a>
+  </nav>
+</footer>
+</body>
+</html>

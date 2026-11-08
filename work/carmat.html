@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CarMat Website · Client project in development · Olena Voroniuk</title>
+<meta name="description" content="CarMat: a website and custom order flow for Car Mat Design, a custom EVA car-mat maker, in development with a real client.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="../css/style.css?v=20261108l">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="wrap top">
+  <a class="brand" href="../index.html">olena<span>.</span>voroniuk</a>
+  <nav aria-label="Main"><a href="../index.html">All work</a><a href="../index.html#dev">UX &amp; Web</a><a href="illustration.html">Graphic design</a><a href="../assets/Olena_Voroniuk_Resume.pdf" download>Resume ↓</a></nav>
+</header>
+
+<main class="wrap" id="main">
+  <div class="hero">
+    <div>
+      <div class="pills"><span class="pill hot">In development · real client</span><span class="pill">Claude</span><span class="pill">GitHub Pages</span></div>
+      <h1>CarMat Website</h1>
+      <p class="lede">A real client project, in development now: a website with a custom order flow for Car Mat Design, a maker of custom-fit EVA car mats. I designed it, styled every screen, planned the architecture and built it with Claude.</p>
+      <div class="actions">
+        <a class="btn primary" href="https://olena-v.github.io/carmat-portfolio-site/">Live concept ↗</a>
+        <a class="btn" href="https://github.com/olena-v/carmat-portfolio-site">Code on GitHub ↗</a>
+      </div>
+      <p class="note">This page and the live concept show the site only: no prices, no stock and no client contacts. The order form is a demo and sends nothing. The client’s contacts and links will be added after the project is finished and the real site is live.</p>
+    </div>
+    <div class="hero-img"><img src="../assets/img/carmat-hero.jpg?v=2" alt="Grey EVA car mat with orange trim inside a car" width="1792" height="663"></div>
+  </div>
+
+  <dl class="meta">
+    <div><dt>Role</dt><dd>UX and visual design, full styling, site architecture, development with Claude</dd></div>
+    <div><dt>Result</dt><dd>Live concept site with a custom order flow</dd></div>
+    <div><dt>Tools &amp; methods</dt><dd><ul class="tools"><li>Claude (React + Vite)</li><li>Git &amp; GitHub</li><li>GitHub Pages</li><li>Open car-model dataset</li><li>Responsive design</li></ul></dd></div>
+  </dl>
+
+  <section class="block" aria-labelledby="s-brief">
+    <span class="lbl">The brief</span>
+    <h2 id="s-brief">Every car is different, and the order has to show it</h2>
+    <p class="prose">The maker cuts every set to the pattern of one exact car. So the order can’t be a shopping cart with fixed products: the customer has to name their car first, then build the set from this maker’s own materials. The site is made for this one workshop, not adapted from a template.</p>
+  </section>
+
+  <section class="block" aria-labelledby="s-social">
+    <span class="lbl">Design decision</span>
+    <h2 id="s-social">No gallery to maintain: the social pages already are one</h2>
+    <p class="prose">The owner already posts a lot about their work on Instagram and Facebook, so that content exists and stays fresh. A second gallery on the site would repeat it and go out of date the first week nobody updates it. Instead, Instagram and Facebook sit right in the main menu, and the site focuses on what social media can’t do: a clear order for one exact car.</p>
+    <figure><img src="../assets/img/carmat-social-nav.jpg" alt="Home page of the concept site with the Car Mat Design logo and the headline Cut for your car, nothing else; the Instagram and Facebook links in the main menu are highlighted" loading="lazy" width="1600" height="1120"><figcaption>Instagram and Facebook in the main menu replace a separate gallery.</figcaption></figure>
+  </section>
+
+  <section class="block" aria-labelledby="s-flow">
+    <span class="lbl">The order flow</span>
+    <h2 id="s-flow">Five steps, built around one car</h2>
+    <p class="prose">Vehicle, colour, heel pad, coverage, details. A “Your order” summary stays beside the steps and updates with every choice, so the customer always sees what they are building.</p>
+
+    <h3 style="font-size:22px;font-weight:600;margin-top:40px">1 · The car comes first</h3>
+    <p class="prose" style="margin-top:8px">Pick a make and the model list shows only that brand’s models, each with the years it was made; pick a model and only its years are offered. A search box finds any of 66 makes and 1,459 models by name. If a car is missing, “My car isn’t listed” lets the customer describe it instead of leaving.</p>
+    <figure><img src="../assets/img/carmat-order-vehicle.jpg" alt="Order step 1, Your vehicle: Honda is chosen as the make and the model list shows only Honda models with their years, such as Accord 1992 to 2026 and Civic Type R 2017 to 2026; a Your order summary sits on the right" loading="lazy" width="1600" height="784"><figcaption>The model list depends on the make, and every model shows its years.</figcaption></figure>
+
+    <h3 style="font-size:22px;font-weight:600;margin-top:40px">2 · This maker’s materials, shown as photos</h3>
+    <p class="prose" style="margin-top:8px">Mat style, EVA colour and edge trim are real photos of the maker’s own mats, not generic colour dots, so the customer sees the texture they will get.</p>
+    <figure><img src="../assets/img/carmat-order-style.jpg" alt="Order step 2, Mat style and color: photo cards for flat and raised-edge mats, with raised edges selected, and photo swatches for five EVA colours" loading="lazy" width="1600" height="1104"><figcaption>Flat or raised edges, then the EVA colour.</figcaption></figure>
+    <div class="two" style="margin-top:20px">
+      <figure><img src="../assets/img/carmat-order-heel.jpg" alt="Order step 3, Heel pad: seven options from no heel pad to aluminium and rubber pads in several colours, with Rubber X silver selected" loading="lazy" width="1600" height="776"><figcaption>Step 3: an optional heel pad for the driver mat.</figcaption></figure>
+      <figure><img src="../assets/img/carmat-order-coverage.jpg" alt="Order step 4, Coverage and CarBox: front and rear mats selected, an added CarBox trunk organizer, and its colour and edge swatches" loading="lazy" width="1600" height="1072"><figcaption>Step 4: which rows to cover, plus an optional trunk organizer.</figcaption></figure>
+    </div>
+
+    <h3 style="font-size:22px;font-weight:600;margin-top:40px">3 · Easy to change, before and after sending</h3>
+    <p class="prose" style="margin-top:8px">The customer can go back to any step without losing their choices, and “Edit order” reopens the whole set after it’s sent. Prices aren’t shown on purpose: every car pattern is different, so the maker calls back to confirm fit and price before cutting.</p>
+    <figure><img src="../assets/img/carmat-order-edit.jpg" alt="Order received screen with a full summary of the set and an Edit order button" loading="lazy" width="1600" height="776"><figcaption>The confirmation repeats every choice and offers “Edit order”.</figcaption></figure>
+  </section>
+
+  <section class="block" aria-labelledby="s-arch">
+    <span class="lbl">Architecture</span>
+    <h2 id="s-arch">Content the owner can change without a redesign</h2>
+    <ul class="cards">
+      <li><h3>Options in one file</h3><p>Mat colours, edge trims, heel pads and sets live in a single data file, so new materials can be added or removed without touching the layout.</p></li>
+      <li><h3>A local car library</h3><p>An open US car-model dataset, cleaned into one file with makes, models and years. The picker works offline, with no external API.</p></li>
+      <li><h3>Small React parts</h3><p>The vehicle picker, option pickers and order steps are separate components, built with Vite into a static site that any host can serve.</p></li>
+    </ul>
+  </section>
+
+  <section class="block" aria-labelledby="s-process">
+    <span class="lbl">Working with a client</span>
+    <h2 id="s-process">Design, review, adjust, repeat</h2>
+    <p class="prose">I designed the look and the order flow, planned how the site is put together and built it with Claude, reviewing and testing every step myself. The site grows in rounds: I share a version, the owner reviews it, and their notes become the next list of changes.</p>
+  </section>
+
+  <nav class="next" aria-label="More projects">
+    <a class="prev" href="maker-space.html"><span class="lbl">Previous project</span><span class="big">← Maker Space</span></a>
+    <a class="nxt" href="safearea.html"><span class="lbl">Next project</span><span class="big">SafeArea App →</span></a>
+  </nav>
+</main>
+<footer class="wrap site">
+  <span>© 2026 Olena Voroniuk</span>
+  <nav class="foot-links" aria-label="Contact">
+    <a href="mailto:olena.voroniuk2@gmail.com">olena.voroniuk2@gmail.com</a>
+    <a href="https://www.linkedin.com/in/olena-voroniuk-216633222/">LinkedIn ↗</a>
+    <a href="https://github.com/olena-v">GitHub ↗</a>
+  </nav>
+</footer>
+</body>
+</html>
