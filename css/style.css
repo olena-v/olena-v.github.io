@@ -67,7 +67,7 @@ a.t:hover .go{transform:translateX(3px)}
 .t.pic{padding:0}
 .t.pic .txt{padding:22px 22px 14px}
 .t.pic img{width:100%;flex:1;min-height:150px;object-fit:cover;object-position:top}
-.t.pic.contain img{object-fit:contain;object-position:center;background:#F4F4EF;width:auto;margin:0 18px 18px;border-radius:12px}
+.t.pic.contain img{object-fit:contain;object-position:center;background:#F4F4EF;width:auto;margin:0 24px 24px;padding:18px;box-sizing:border-box;border-radius:12px}
 /* full: show the whole mockup at its own ratio, never cropped */
 .t.pic.full{gap:0}
 .t.pic.full .txt{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
