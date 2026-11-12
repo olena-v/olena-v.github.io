@@ -180,3 +180,12 @@ footer.site{padding-block:28px 40px;color:var(--muted);font-size:14px;border-top
 code{font:500 .88em/1.5 var(--f-mono);background:var(--tile);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:1px 6px;overflow-wrap:anywhere}
 pre.code{margin:20px 0;max-width:760px;background:var(--tile);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px 20px;overflow-x:auto}
 pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:normal;white-space:pre}
+
+/* Phones: menu stays visible while scrolling; filters are hidden */
+@media (max-width:560px){
+  .top{position:sticky;top:0;z-index:20;background:var(--bg);padding-block:12px 10px;gap:4px 0;border-bottom:1px solid var(--line)}
+  .top nav{gap:0 14px;width:100%;justify-content:space-between}
+  .top nav a{font-size:14px;padding:8px 0;white-space:nowrap}
+  .chips{display:none}
+  html{scroll-padding-top:120px}
+}
