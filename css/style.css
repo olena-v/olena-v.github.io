@@ -333,3 +333,5 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 
 /* Big project images: only a slight corner rounding */
 .proj-grid .t.proj img,.proj-grid .t.proj.p-ms img,.proj-grid .t.proj.p-gd img{border-radius:6px}
+/* Maker Space image at its own size so its rounded corners show */
+@media (min-width:901px){.proj-grid .t.proj.p-ms img{flex:none;height:auto;object-fit:fill;margin-top:auto}}
