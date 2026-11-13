@@ -288,3 +288,12 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .top nav{gap:4px;justify-content:space-between;flex-wrap:nowrap}
   .top nav a{font-size:12.5px;padding:6px 8px;min-height:36px;white-space:nowrap;border-width:1px}
 }
+
+/* Logo left and menu right stay on one line on tablets and laptops */
+@media (min-width:561px) and (max-width:1180px){
+  .brand img.full{width:clamp(190px,30vw,552px)}
+  .top nav{gap:6px}
+  .top nav a{font-size:13.5px;padding:6px 11px;min-height:38px}
+  .top .end{gap:12px}
+}
+@media (min-width:701px){.top{flex-wrap:nowrap}.top .end{flex:none}.top nav{flex-wrap:nowrap}}
