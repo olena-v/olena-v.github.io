@@ -247,12 +247,12 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 
 /* Header: full logo; the OV icon only on phones */
 .brand .full.on-light{display:block}
-.brand .full img,.brand img.full{height:auto;width:min(552px,60vw)}
+.brand .full img,.brand img.full{height:auto;width:min(530px,60vw)}
 .brand .icon{display:none!important}
 :root[data-theme="dark"] .brand .full.on-light{display:none}
 :root[data-theme="dark"] .brand .full.on-dark{display:block}
 @media (max-width:560px){
-  .brand img.full{width:min(320px,70vw)}
+  .brand img.full{width:min(308px,68vw)}
   .brand .full.on-light{display:block!important}
   :root[data-theme="dark"] .brand .full.on-light{display:none!important}
   :root[data-theme="dark"] .brand .full.on-dark{display:block!important}
@@ -291,7 +291,7 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 
 /* Logo left and menu right stay on one line on tablets and laptops */
 @media (min-width:561px) and (max-width:1180px){
-  .brand img.full{width:clamp(190px,30vw,552px)}
+  .brand img.full{width:clamp(190px,30vw,530px)}
   .top nav{gap:6px}
   .top nav a{font-size:13.5px;padding:6px 11px;min-height:38px}
   .top .end{gap:12px}
@@ -381,3 +381,4 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .next a.prev:hover .big{transform:translateX(-4px)}
   .next .big{display:inline-block;transition:transform .25s ease}
 }
+.top nav a{gap:5px}
