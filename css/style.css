@@ -267,3 +267,4 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 /* Light theme: Download CV tile in the logo's orange with dark teal text (7.3:1) */
 :root:not([data-theme="dark"]) .t.coral{background:#F4A261;border-color:#F4A261;color:#0E2A31}
 :root:not([data-theme="dark"]) .t.coral .lbl,:root:not([data-theme="dark"]) .t.coral p{color:#0E2A31}
+:root:not([data-theme="dark"]) .badge,:root:not([data-theme="dark"]) .pill.hot{background:#F4A261;border-color:#F4A261;color:#0E2A31}
