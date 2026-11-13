@@ -272,3 +272,7 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 /* Skill tags on the home page match the project-page tool tags */
 .stack li{font:14px var(--f-mono);padding:5px 11px;border-radius:8px;background:var(--tile-2);border:1px solid var(--line-strong)}
 :root[data-theme="dark"] .stack li,:root[data-theme="dark"] .tools li{background:#2A3632;border-color:#43524C}
+
+/* Light theme: headings in the logo teal */
+:root:not([data-theme="dark"]) :is(h1,h2,h3):not(.sk-lbl){color:var(--mint)}
+:root:not([data-theme="dark"]) .t.coral h2{color:#0E2A31}
