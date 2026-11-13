@@ -363,3 +363,21 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 .foot-brand img{height:40px;width:auto}
 .foot-logo{display:inline-flex;border-radius:8px}
 .foot-logo:hover{opacity:.8}
+
+/* Hover motion: arrows nudge in their direction, text links draw an underline, tiles lift */
+.arr{display:inline-block;transition:transform .25s ease}
+.me .row a,.foot-links a{background:linear-gradient(currentColor,currentColor) 0 100%/0 2px no-repeat;transition:background-size .3s ease,color .2s}
+.top nav a,.btn,.theme-toggle{transition:transform .2s ease,border-color .2s,color .2s,background-color .2s}
+@media (prefers-reduced-motion:no-preference){
+  a:hover .arr-ne,a:focus-visible .arr-ne{transform:translate(3px,-3px)}
+  a:hover .arr-s,a:focus-visible .arr-s{transform:translateY(3px)}
+  a:hover .arr-e,a:focus-visible .arr-e{transform:translateX(4px)}
+  .me .row a:hover,.foot-links a:hover,.me .row a:focus-visible,.foot-links a:focus-visible{background-size:100% 2px;text-decoration:none}
+  .top nav a:hover,.btn:hover{transform:translateY(-2px)}
+  .theme-toggle:hover{transform:rotate(20deg)}
+  a.t:hover{transform:translateY(-4px)}
+  a.t:hover .go{transform:translateX(5px)}
+  .next a.nxt:hover .big{transform:translateX(4px)}
+  .next a.prev:hover .big{transform:translateX(-4px)}
+  .next .big{display:inline-block;transition:transform .25s ease}
+}
