@@ -105,7 +105,7 @@ a.t:hover .go{transform:translateX(3px)}
 .modes li{font:500 14px var(--f-mono);padding:5px 12px;border-radius:999px;border:1px solid var(--mint);color:var(--mint)}
 .status{display:inline-flex;align-items:center;gap:8px;font:500 14px var(--f-mono);color:var(--mint)}
 .status i{width:9px;height:9px;border-radius:50%;background:var(--mint);animation:pulse 2.2s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(127,209,174,.55)}70%{box-shadow:0 0 0 9px rgba(127,209,174,0)}100%{box-shadow:0 0 0 0 rgba(127,209,174,0)}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(244,162,97,.75)}70%{box-shadow:0 0 0 9px rgba(244,162,97,0)}100%{box-shadow:0 0 0 0 rgba(244,162,97,0)}}
 .clock{font:500 clamp(30px,3vw,40px)/1.1 var(--f-mono);letter-spacing:-.02em;margin-top:auto}
 .coral{background:var(--coral);border-color:var(--coral);color:var(--coral-ink)}
 .coral .lbl{color:var(--coral-ink)}
