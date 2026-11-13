@@ -340,3 +340,8 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 :root:not([data-theme="dark"]) .status{color:#4F7A84}
 :root:not([data-theme="dark"]) .status i{background:#4F7A84}
 :root:not([data-theme="dark"]) .t:not(.coral) .lbl{color:#4F7A84}
+
+/* Dark theme keeps its original mint labels and mint pulse */
+:root[data-theme="dark"] .t:not(.coral) .lbl{color:var(--mint)}
+:root[data-theme="dark"] .status i{animation-name:pulse-mint}
+@keyframes pulse-mint{0%{box-shadow:0 0 0 0 rgba(127,209,174,.55)}70%{box-shadow:0 0 0 9px rgba(127,209,174,0)}100%{box-shadow:0 0 0 0 rgba(127,209,174,0)}}
