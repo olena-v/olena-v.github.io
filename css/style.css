@@ -245,10 +245,15 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 /* Tile labels in the accent colour */
 .t:not(.coral) .lbl{color:var(--coral)}
 
-/* Header shows the OV icon only; the full logo sits in the intro tile */
-.brand .full{display:none!important}
-.brand .icon.on-light{display:block;height:40px}
-:root[data-theme="dark"] .brand .icon.on-light{display:none}
-:root[data-theme="dark"] .brand .icon.on-dark{display:block;height:40px}
-.me-logo{margin:10px 0 6px}
-.me-logo img{width:100%;max-width:480px;height:auto}
+/* Header: full logo; the OV icon only on phones */
+.brand .full.on-light{display:block}
+.brand .full img,.brand img.full{height:auto;width:min(420px,60vw)}
+.brand .icon{display:none!important}
+:root[data-theme="dark"] .brand .full.on-light{display:none}
+:root[data-theme="dark"] .brand .full.on-dark{display:block}
+@media (max-width:560px){
+  .brand img.full{width:min(260px,62vw)}
+  .brand .full.on-light{display:block!important}
+  :root[data-theme="dark"] .brand .full.on-light{display:none!important}
+  :root[data-theme="dark"] .brand .full.on-dark{display:block!important}
+}
