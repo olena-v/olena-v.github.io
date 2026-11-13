@@ -263,3 +263,7 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 .t.proj img{flex:1 1 0px;min-height:0;height:0;width:auto;margin:0 24px 24px;object-fit:contain;object-position:center}
 .grid > .t.proj{min-height:560px}
 @media (max-width:560px){.grid > .t.proj{min-height:0}.t.proj img{height:auto;flex:none}}
+
+/* Light theme: Download CV tile in the logo's orange with dark teal text (7.3:1) */
+:root:not([data-theme="dark"]) .t.coral{background:#F4A261;border-color:#F4A261;color:#0E2A31}
+:root:not([data-theme="dark"]) .t.coral .lbl,:root:not([data-theme="dark"]) .t.coral p{color:#0E2A31}
