@@ -297,3 +297,17 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .top .end{gap:12px}
 }
 @media (min-width:701px){.top{flex-wrap:nowrap}.top .end{flex:none}.top nav{flex-wrap:nowrap}}
+
+/* When project tiles stack one per row, each image takes the full width at its own height */
+@media (max-width:900px){
+  .grid > .t.proj{min-height:0}
+  .t.proj img{flex:none;height:auto;width:auto;max-width:calc(100% - 48px)}
+}
+
+/* Project tiles, side by side: Maker Space and the collage show at full width and set the row height;
+   CarMat and SafeArea fill the same height next to them */
+@media (min-width:901px){
+  .grid > .t.proj{min-height:0}
+  .t.proj[href*="maker"] img,.t.proj[href*="illustration"] img{flex:none;height:auto;width:calc(100% - 48px);object-fit:contain}
+  .t.proj[href*="carmat"] img,.t.proj[href*="safearea"] img{flex:1 1 0px;height:0;min-height:0;width:calc(100% - 48px);object-fit:cover;border-radius:12px}
+}
