@@ -1,3 +1,15 @@
+// Theme switch: light by default, choice remembered in this browser
+const toggles = document.querySelectorAll('.theme-toggle');
+const setTheme = dark => {
+  if (dark) document.documentElement.dataset.theme = 'dark'; else delete document.documentElement.dataset.theme;
+  toggles.forEach(b => b.setAttribute('aria-pressed', dark));
+  try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+};
+toggles.forEach(b => {
+  b.setAttribute('aria-pressed', document.documentElement.dataset.theme === 'dark');
+  b.addEventListener('click', () => setTheme(document.documentElement.dataset.theme !== 'dark'));
+});
+
 // Live Pacific time in the location tile
 const clock = document.getElementById('clock');
 if (clock) {

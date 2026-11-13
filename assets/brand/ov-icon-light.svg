@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="75 502 256 256">
+<rect x="91.5" y="519" width="223" height="222" rx="36" fill="none" stroke="#EAF2F1" stroke-width="9"/>
+<defs>
+<clipPath id="ilightc"><path d="M0 0H1400V682.0H212V1400H0Z"/></clipPath>
+<clipPath id="ilightg"><rect x="190" y="599.0" width="140" height="83.0"/></clipPath>
+<clipPath id="ilightt"><rect x="190" y="578.0" width="140" height="22.0"/></clipPath>
+</defs>
+<path d="M203.41 656.45 A45 45 0 1 1 209.13 614.20 L248.81 720" fill="none" stroke="#EAF2F1" stroke-width="18" clip-path="url(#ilightc)"/>
+<line x1="296.88" y1="540" x2="223.08" y2="720" stroke="#EAF2F1" stroke-width="22" clip-path="url(#ilightg)"/>
+<line x1="296.88" y1="540" x2="223.08" y2="720" stroke="#F4A261" stroke-width="22" clip-path="url(#ilightt)"/>
+</svg>

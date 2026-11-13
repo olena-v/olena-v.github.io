@@ -1,5 +1,27 @@
-/* Bento Lab: dark tiles, mint + coral accents. Home is a filterable tile grid; project pages share the same tokens in a reading layout. */
+/* Bento Lab: light (logo teal + terracotta) and dark (mint + coral) themes. Home is a filterable tile grid; project pages share the same tokens in a reading layout. */
 :root{
+  /* Light theme (default): colours from the OV logo */
+  --bg:#F3F7F6;
+  --tile:#FFFFFF;
+  --tile-2:#EAF2F1;
+  --line:#DCE6E4;
+  --line-strong:#C2D3D0;
+  --ink:#0E2A31;
+  --muted:#4A666D;      /* 6.1:1 on white */
+  --mint:#0F4C5C;       /* brand teal: labels, links, focus */
+  --coral:#B85C34;      /* brand terracotta, 4.6:1 with white */
+  --coral-ink:#FFFFFF;
+  --coral-text:#FFFFFF;
+  --on-accent:#FFFFFF;
+  --fail:#B23A1E;
+  --shadow:0 1px 2px rgba(14,42,49,.04),0 8px 24px rgba(14,42,49,.05);
+  --f-ui:"Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono:"Geist Mono", ui-monospace, Menlo, monospace;
+  --radius:20px;
+  color-scheme:light;
+}
+/* Dark theme: dark tiles, mint + coral accents */
+:root[data-theme="dark"]{
   --bg:#101412;
   --tile:#1A201D;
   --tile-2:#212823;
@@ -7,12 +29,13 @@
   --line-strong:#3E4A44;
   --ink:#EAF0EC;
   --muted:#A3AFA8;      /* 7.4:1 on --tile */
-  --mint:#7FD1AE;       /* labels, links, focus */
+  --mint:#7FD1AE;
   --coral:#FF8A65;
   --coral-ink:#1A0E0A;
-  --f-ui:"Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --f-mono:"Geist Mono", ui-monospace, Menlo, monospace;
-  --radius:20px;
+  --coral-text:#3A1E15;
+  --on-accent:#0D1A14;
+  --fail:#FF9C80;
+  --shadow:none;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -67,7 +90,7 @@ a.t:hover .go{transform:translateX(3px)}
 .t.pic{padding:0}
 .t.pic .txt{padding:22px 22px 14px}
 .t.pic img{width:100%;flex:1;min-height:150px;object-fit:cover;object-position:top}
-.t.pic.contain img{object-fit:contain;object-position:center;background:#F4F4EF;width:auto;margin:0 24px 24px;padding:18px;box-sizing:border-box;border-radius:12px}
+.t.pic.contain img{object-fit:contain;object-position:center;background:var(--tile-2);width:auto;margin:0 24px 24px;padding:18px;box-sizing:border-box;border-radius:12px}
 /* full: show the whole mockup at its own ratio, never cropped */
 .t.pic.full{gap:0}
 .t.pic.full .txt{flex:1;display:flex;flex-direction:column;justify-content:center;gap:6px}
@@ -86,7 +109,7 @@ a.t:hover .go{transform:translateX(3px)}
 .clock{font:500 clamp(30px,3vw,40px)/1.1 var(--f-mono);letter-spacing:-.02em;margin-top:auto}
 .coral{background:var(--coral);border-color:var(--coral);color:var(--coral-ink)}
 .coral .lbl{color:var(--coral-ink)}
-.coral p{color:#3A1E15}
+.coral p{color:var(--coral-text)}
 .coral h2{font-size:24px}
 .stack{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 0;padding:0;list-style:none}
 .stack li{font:14px var(--f-mono);border:1px solid var(--line-strong);padding:4px 10px;border-radius:8px}
@@ -115,7 +138,7 @@ a.t:hover .go{transform:translateX(3px)}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:12px 20px;border-radius:12px;font-weight:600;text-decoration:none;border:1.5px solid var(--line-strong);color:var(--ink)}
 .btn:hover{border-color:var(--mint)}
-.btn.primary{background:var(--mint);border-color:var(--mint);color:#0D1A14}
+.btn.primary{background:var(--mint);border-color:var(--mint);color:var(--on-accent)}
 .meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:64px}
 .meta > div{background:var(--tile);padding:20px 22px}
 .meta dt{font:500 12px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
@@ -149,7 +172,7 @@ table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
 th,td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
 thead th{font:500 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--tile)}
 tbody tr:last-child td{border-bottom:0}
-.fail{color:#FF9C80}.pass{color:var(--mint)}
+.fail{color:var(--fail)}.pass{color:var(--mint)}
 .tag-ba{display:inline-block;font:600 12px var(--f-mono);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
 .next{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-block:48px 72px;border-top:1px solid var(--line)}
 .next a{display:flex;flex-direction:column;gap:6px;color:var(--ink);text-decoration:none;padding:6px 0}
@@ -188,4 +211,33 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .top nav a{font-size:14px;padding:8px 0;white-space:nowrap}
   .chips{display:none}
   html{scroll-padding-top:120px}
+}
+
+/* Logo in the header; the icon replaces the full logo on phones */
+.brand img{display:block;height:44px;width:auto}
+.brand .icon{display:none}
+.brand .on-dark{display:none}
+:root[data-theme="dark"] .brand .on-light{display:none}
+:root[data-theme="dark"] .brand .full.on-dark{display:block}
+.t{box-shadow:var(--shadow)}
+/* Images made for one theme */
+.only-dark{display:none!important}
+:root[data-theme="dark"] .only-light{display:none!important}
+:root[data-theme="dark"] .only-dark{display:block!important}
+/* Theme switch */
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid var(--line-strong);background:var(--tile);color:var(--ink);cursor:pointer;padding:0;flex:none}
+.theme-toggle:hover{border-color:var(--mint);color:var(--mint)}
+.theme-toggle svg{width:18px;height:18px}
+.theme-toggle .moon{display:none}
+:root[data-theme="dark"] .theme-toggle .sun{display:none}
+:root[data-theme="dark"] .theme-toggle .moon{display:block}
+.top .end{display:flex;align-items:center;gap:20px}
+@media (max-width:560px){
+  .brand .full{display:none!important}
+  .brand .icon.on-light{display:block;height:36px}
+  :root[data-theme="dark"] .brand .icon.on-light{display:none}
+  :root[data-theme="dark"] .brand .icon.on-dark{display:block;height:36px}
+  .top .end{display:contents}
+  .theme-toggle{order:1;margin-left:auto}
+  .top nav{order:2}
 }
