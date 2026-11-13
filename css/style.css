@@ -278,3 +278,13 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 :root:not([data-theme="dark"]) .t.coral h2{color:#0E2A31}
 :root:not([data-theme="dark"]) .contact .row a,:root:not([data-theme="dark"]) .foot-links a{color:var(--mint)}
 :root:not([data-theme="dark"]) .contact .row a:hover,:root:not([data-theme="dark"]) .foot-links a:hover{color:var(--coral)}
+
+/* Top menu as pill buttons (the filter chips are gone) */
+.top nav{gap:8px;align-items:center}
+.top nav a{font:500 15px var(--f-ui);color:var(--ink);border:1.5px solid var(--line-strong);padding:9px 18px;border-radius:999px;min-height:44px;display:inline-flex;align-items:center}
+.top nav a:hover{border-color:var(--mint);color:var(--ink)}
+.top nav a[aria-current="page"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+@media (max-width:560px){
+  .top nav{gap:4px;justify-content:space-between;flex-wrap:nowrap}
+  .top nav a{font-size:12.5px;padding:6px 8px;min-height:36px;white-space:nowrap;border-width:1px}
+}

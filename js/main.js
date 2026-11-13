@@ -49,6 +49,11 @@ const devView = () => {
   resetFilter();
   const on = location.hash === '#dev';
   document.body.classList.toggle('dev-view', on);
+  document.querySelectorAll('header nav a').forEach(a => {
+    const h = a.getAttribute('href');
+    if (h === '#dev') { if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); }
+    if (h === '#') { if (on) a.removeAttribute('aria-current'); else a.setAttribute('aria-current', 'page'); }
+  });
   if (on) document.getElementById('dev-h')?.scrollIntoView({ block: 'start' });
 };
 window.addEventListener('hashchange', devView);
@@ -57,5 +62,5 @@ devView();
 // Any top-menu link clears the filters first (also when the hash does not change)
 document.querySelectorAll('header nav a, .dev-head a').forEach(a => a.addEventListener('click', () => {
   resetFilter();
-  if (a.getAttribute('href') === '#') { history.replaceState(null, '', location.pathname); devView(); }
+  if (a.getAttribute('href') === '#') { history.replaceState(null, '', location.pathname); devView(); scrollTo(0, 0); }
 }));
