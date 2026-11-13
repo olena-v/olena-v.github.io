@@ -288,8 +288,3 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .top nav{gap:4px;justify-content:space-between;flex-wrap:nowrap}
   .top nav a{font-size:12.5px;padding:6px 8px;min-height:36px;white-space:nowrap;border-width:1px}
 }
-
-/* Menu sits on its own row under the logo, where the filters used to be */
-.top .end{display:contents}
-.theme-toggle{order:1;margin-left:auto}
-.top nav{order:2;width:100%;justify-content:flex-start}
