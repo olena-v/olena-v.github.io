@@ -330,6 +330,3 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .proj-grid .t.proj img{flex:none;height:auto;width:auto;max-width:calc(100% - 48px);object-fit:contain}
 }
 .dev-view .grid > .proj-grid{grid-column:1/-1;height:auto;min-height:0}
-
-/* Big project tiles: every image sits on the same tinted card as the small tiles */
-.proj-grid .t.proj img,.proj-grid .t.proj.p-ms img,.proj-grid .t.proj.p-gd img{object-fit:contain;background:var(--tile-2);padding:18px;box-sizing:border-box;border-radius:12px}
