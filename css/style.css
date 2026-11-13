@@ -388,3 +388,13 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 .foot-links{gap:4px 18px}
 .foot-links a{font-size:14px;font-weight:500}
 footer.site .copy{font-size:13px;color:var(--muted)}
+
+/* UX & Web view: first row as tall as Maker Space needs, second row taller; Cooking gets its description */
+.dev-only{display:none}
+.dev-view .dev-only{display:block}
+@media (min-width:901px){
+  .dev-view .proj-grid > .t.proj.p-ms,.dev-view .proj-grid > .t.proj.p-cm{height:auto}
+  .dev-view .proj-grid > .t.proj.p-ms img{flex:none;height:auto;object-fit:fill;margin-top:0}
+  .dev-view .proj-grid > .t.proj.p-cm img{flex:1 1 0px;height:0;min-height:0;object-fit:cover}
+  .dev-view .proj-grid > .t.proj.p-sa,.dev-view .grid > a.t.contain[data-dev]{height:600px}
+}
