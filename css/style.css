@@ -361,3 +361,5 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 /* Footer logo */
 .foot-brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .foot-brand img{height:40px;width:auto}
+.foot-logo{display:inline-flex;border-radius:8px}
+.foot-logo:hover{opacity:.8}
