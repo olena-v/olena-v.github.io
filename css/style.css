@@ -241,3 +241,6 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
   .theme-toggle{order:1;margin-left:auto}
   .top nav{order:2}
 }
+
+/* Tile labels in the accent colour */
+.t:not(.coral) .lbl{color:var(--coral)}
