@@ -398,3 +398,10 @@ footer.site .copy{font-size:13px;color:var(--muted)}
   .dev-view .proj-grid > .t.proj.p-cm img{flex:1 1 0px;height:0;min-height:0;object-fit:cover}
   .dev-view .proj-grid > .t.proj.p-sa,.dev-view .grid > a.t.contain[data-dev]{height:600px}
 }
+
+/* Tile text: a little air between label, title and description */
+.t .txt .lbl,.t .txt .badge{margin-bottom:6px}
+.t .txt h2{margin-bottom:8px}
+.t.contain .txt h2{margin-bottom:0}
+.proj-grid{grid-template-rows:repeat(6,minmax(150px,auto))}
+.proj-grid .t.proj.p-ms img{flex:0 1 auto;min-height:0}
