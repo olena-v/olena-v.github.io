@@ -356,3 +356,4 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 
 /* UX & Web view: the four web projects form one even 2x2 grid */
 .dev-view .grid > .proj-grid{display:contents}
+:root:not([data-theme="dark"]) .note{border-left-color:#F4A261}
