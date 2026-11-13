@@ -335,3 +335,8 @@ pre.code code{background:none;border:0;padding:0;font-size:14px;overflow-wrap:no
 .proj-grid .t.proj img,.proj-grid .t.proj.p-ms img,.proj-grid .t.proj.p-gd img{border-radius:6px}
 /* Maker Space image at its own size so its rounded corners show */
 @media (min-width:901px){.proj-grid .t.proj.p-ms img{flex:none;height:auto;object-fit:fill;margin-top:auto}}
+
+/* Light theme: status line and tile labels in the logo subtitle colour (4.9:1) */
+:root:not([data-theme="dark"]) .status{color:#4F7A84}
+:root:not([data-theme="dark"]) .status i{background:#4F7A84}
+:root:not([data-theme="dark"]) .t:not(.coral) .lbl{color:#4F7A84}
