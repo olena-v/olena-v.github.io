@@ -406,3 +406,9 @@ footer.site .copy{font-size:13px;color:var(--muted)}
 @media (min-width:901px){.proj-grid{grid-template-rows:repeat(6,minmax(150px,auto))}}
 .proj-grid .t.proj.p-ms img{flex:0 1 auto;min-height:0}
 .t .txt .badge{display:inline-block;margin-bottom:8px}
+
+/* Phones and tablets, UX & Web view: tiles fit their content, images shown whole */
+@media (max-width:900px){
+  .dev-view .proj-grid > .t.proj,.dev-view .grid > a.t.contain[data-dev]{height:auto}
+  .dev-view .proj-grid > .t.proj img,.dev-view .grid > a.t.contain[data-dev] img{flex:none;height:auto;width:auto;max-width:calc(100% - 48px);object-fit:contain}
+}
