@@ -412,3 +412,6 @@ footer.site .copy{font-size:13px;color:var(--muted)}
   .dev-view .proj-grid > .t.proj,.dev-view .grid > a.t.contain[data-dev]{height:auto}
   .dev-view .proj-grid > .t.proj img,.dev-view .grid > a.t.contain[data-dev] img{flex:none;height:auto;width:auto;max-width:calc(100% - 48px);object-fit:contain}
 }
+
+/* screen-reader-only text */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
